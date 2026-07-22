@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТехноМаркет — Регистрация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <div class="glass-card">
+    <h2>Создать аккаунт</h2>
+    <p class="subtitle">Зарегистрируйтесь для быстрых покупок техники</p>
+
+    <form class="auth-form" id="registerForm">
+      <!-- Имя и Фамилия -->
+      <div class="input-group">
+        <label for="fullname">Ваше имя</label>
+        <input type="text" id="fullname" placeholder="Иван Иванов" required>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tech@example.com" required>
+      </div>
+
+      <!-- Телефон для доставки -->
+      <div class="input-group">
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+      </div>
+
+      <!-- Пароль -->
+      <div class="input-group">
+        <label for="password">Пароль</label>
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Придумайте пароль" required>
+          <button type="button" id="togglePassword" class="eye-btn" aria-label="Показать пароль">
+            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Согласие -->
+      <div class="form-options">
+        <label class="custom-checkbox-label">
+          <input type="checkbox" id="terms" required>
+          <span class="custom-checkbox"></span>
+          Согласен с правилами магазина
+        </label>
+      </div>
+
+      <!-- Кнопка -->
+      <button type="submit" class="submit-btn">Зарегистрироваться</button>
+    </form>
+
+    <p class="footer-text">Уже есть аккаунт? <a href="#">Войти</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
