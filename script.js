@@ -24,14 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
     eyeIcon.innerHTML = isPassword ? eyeClosedSVG : eyeOpenSVG;
   });
 
-  // Симуляция отправки формы регистрации
+  // Действие при успешной регистрации
   registerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Предотвращаем перезагрузку страницы
     
+    // Сохраняем имя пользователя в память браузера (чтобы потом приветствовать его на сайте)
     const name = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
+    localStorage.setItem('userName', name);
 
-    alert(`Спасибо за регистрацию, ${name}! На адрес ${email} отправлено письмо с подтверждением.`);
-    registerForm.reset();
+    // Переход на главную страницу магазина (замените 'home.html' на адрес вашей страницы)
+    window.location.href = 'home.html'; 
   });
 });
